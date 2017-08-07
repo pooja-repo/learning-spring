@@ -15,8 +15,19 @@ public class GoodMorningTests {
 	GreetingService greetingService;
 
 	@Test
-	public void testcase01_goodMorning_works() {
+	public void testcase01_goodMorning_works() throws Exception {
 		String result = greetingService.goodMorning("Pooja");
 		Assert.assertNotNull(result);
 	}
+
+	@Test(expected = Exception.class)
+	public void testcase02_goodMorning_with_null_name_works() throws Exception {
+		greetingService.goodMorning(null);
+	}
+	
+	@Test(expected = Exception.class)
+	public void testcase03_goodMorning_with_empty_name_works() throws Exception {
+		greetingService.goodMorning("");
+	}
+	
 }

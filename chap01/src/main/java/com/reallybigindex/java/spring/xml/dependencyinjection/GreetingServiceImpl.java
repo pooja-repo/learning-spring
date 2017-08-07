@@ -6,7 +6,12 @@ import org.springframework.stereotype.Component;
 public class GreetingServiceImpl implements GreetingService {
 
 	@Override
-	public String goodMorning(String name) {
+	public String goodMorning(String name) throws Exception{
+		if(name == null){
+			throw new Exception("Invalid name exception");
+		}else if(name.trim().length() == 0){
+			throw new Exception("Invalid name exception");
+		}
 		return "Good morning " + name;
 	}
 
