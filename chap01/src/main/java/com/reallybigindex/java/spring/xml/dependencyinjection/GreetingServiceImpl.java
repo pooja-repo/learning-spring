@@ -24,7 +24,10 @@ public class GreetingServiceImpl implements GreetingService {
 	}
 
 	@Override
-	public String goodEvening(String name) {
+	public String goodEvening(String name) throws Exception {
+		if ((name == null) || (name.trim().length() == 0)) {
+			throw new Exception("Invalid name exception");
+		}
 		return "Good evening " + name;
 	}
 

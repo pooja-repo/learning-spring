@@ -6,7 +6,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	GoodMorningTests.class,
-	GoodAfternoonTests.class
+	GoodAfternoonTests.class,
+	GoodEveningTests.class
 })
 public class GreetingServiceTestSuite {
 
