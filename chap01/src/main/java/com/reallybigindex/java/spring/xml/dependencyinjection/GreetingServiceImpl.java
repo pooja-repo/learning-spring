@@ -32,7 +32,10 @@ public class GreetingServiceImpl implements GreetingService {
 	}
 
 	@Override
-	public String goodNight(String name) {
+	public String goodNight(String name) throws Exception{
+		if((name == null) || (name.trim().length() == 0)){
+			throw new Exception("Invalid name exception");
+		}
 		return "Good night " + name;
 	}
 }

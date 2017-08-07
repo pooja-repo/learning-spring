@@ -7,7 +7,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
 	GoodMorningTests.class,
 	GoodAfternoonTests.class,
-	GoodEveningTests.class
+	GoodEveningTests.class,
+	GoodNightTests.class
 })
 public class GreetingServiceTestSuite {
 

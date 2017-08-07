@@ -8,5 +8,5 @@ public interface GreetingService {
 	
 	public String goodEvening(String name) throws Exception;
 	
-	public String goodNight(String name);
+	public String goodNight(String name) throws Exception;
 }
